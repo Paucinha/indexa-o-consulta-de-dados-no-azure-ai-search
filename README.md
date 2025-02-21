@@ -32,7 +32,7 @@ Observação: os recursos do Azure AI Search e dos serviços do Azure AI devem e
 ```
 - Uma conta de armazenamento com contêineres de blobs, que armazenarão documentos brutos e outras coleções de tabelas, objetos ou arquivos.
 
-#### Criar um recurso (*)de pesquisa do Azure AI(*)
+**Criar um recurso (*)de pesquisa do Azure AI(*)**
 
 
 
