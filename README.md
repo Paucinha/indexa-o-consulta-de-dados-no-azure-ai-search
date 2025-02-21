@@ -10,7 +10,7 @@ Neste LAB, aplicaremos técnicas de organização de documentos e conduziremos p
 
 
 
-
+**Criar um recurso *de pesquisa do Azure AI***
 
 
 
