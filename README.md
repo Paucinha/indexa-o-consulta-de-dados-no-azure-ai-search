@@ -29,9 +29,8 @@ A solução que você criará para o Fourth Coffee requer os seguintes recursos 
 - Um recurso de serviços de IA do Azure , que fornece serviços de IA para habilidades que sua solução de pesquisa pode usar para enriquecer os dados na fonte de dados com insights gerados por IA.
 
 :exclamation: 
-              ```markdown
-              **Observação:** os recursos do Azure AI Search e dos serviços do Azure AI devem estar no mesmo local!
-              ```
+
+              Observação: os recursos do Azure AI Search e dos serviços do Azure AI devem estar no mesmo local!
 
 - Uma conta de armazenamento com contêineres de blobs, que armazenarão documentos brutos e outras coleções de tabelas, objetos ou arquivos.
 
@@ -140,7 +139,7 @@ Depois de ter os documentos no armazenamento, você pode usar o Azure AI Search 
 
 :exclamation: 
               
-              **Observação:** é importante selecionar **Habilitar OCR** para ver todas as opções de campo enriquecido.
+              Observação: é importante selecionar **Habilitar OCR** para ver todas as opções de campo enriquecido.
 
 - Certifique-se de que o **campo Dados de origem** esteja definido como **merged_content*.
 - Altere o **nível de granularidade de enriquecimento** para **Páginas (blocos de 5000 caracteres)**.
@@ -159,15 +158,17 @@ Depois de ter os documentos no armazenamento, você pode usar o Azure AI Search 
 - Detalhes da imagem
 - Referências de imagem
 
-:exclamation: **Observação:** Um aviso solicitando uma **sequência de conexão de conta de armazenamento** é exibido. ![alt text](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)
+:exclamation: 
+              
+              Observação: Um aviso solicitando uma sequência de conexão de conta de armazenamento é exibido. ![alt text](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)
 
 7. Selecione **Choose an existing connection (Escolha uma conexão existente)**. Escolha a conta de armazenamento que você criou anteriormente.
 
 :exclamation: 
               
-              a. Clique em **+ Contêiner** para criar um novo contêiner chamado **knowledge-store** com o nível de privacidade definido como **Privado** e selecione **Criar**.
+              a. Clique em + Contêiner para criar um novo contêiner chamado knowledge-store com o nível de privacidade definido como Privado e selecione Criar.
 
-              b. Selecione o contêiner **de armazenamento de conhecimento** e clique em **Selecionar** na parte inferior da tela.
+              b. Selecione o contêiner de armazenamento de conhecimento e clique em Selecionar na parte inferior da tela.
 
 8. Selecione **Azure blob projections: Document**. Uma configuração para *Container name* com o contêiner *knowledge-store* preenchido automaticamente é exibida. Não altere o nome do contêiner.
 
@@ -248,7 +249,7 @@ No campo **do editor de consulta JSON**, copie e cole:
 
 :exclamation: 
               
-              **Nota** Veja como os resultados são classificados por `@search.score`. Esta é a pontuação atribuída pelo mecanismo de busca para mostrar o quão próximos os resultados correspondem à consulta fornecida.
+              *Nota Veja como os resultados são classificados por @search.score. Esta é a pontuação atribuída pelo mecanismo de busca para mostrar o quão próximos os resultados correspondem à consulta fornecida.
 
 6. Um dos problemas que podemos querer resolver é por que pode haver certas avaliações. Vamos dar uma olhada nas frases-chave associadas à avaliação negativa. O que você acha que pode ser a causa da avaliação?
 
