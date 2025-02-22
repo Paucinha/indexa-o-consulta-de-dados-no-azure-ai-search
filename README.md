@@ -29,8 +29,9 @@ A solução que você criará para o Fourth Coffee requer os seguintes recursos 
 - Um recurso de serviços de IA do Azure , que fornece serviços de IA para habilidades que sua solução de pesquisa pode usar para enriquecer os dados na fonte de dados com insights gerados por IA.
 
 :exclamation: 
-              
+              ```markdown
               **Observação:** os recursos do Azure AI Search e dos serviços do Azure AI devem estar no mesmo local!
+              ```
 
 - Uma conta de armazenamento com contêineres de blobs, que armazenarão documentos brutos e outras coleções de tabelas, objetos ou arquivos.
 
