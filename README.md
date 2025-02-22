@@ -154,16 +154,11 @@ Depois de ter os documentos no armazenamento, você pode usar o Azure AI Search 
 - Detalhes da imagem
 - Referências de imagem
 
-⚠️ **Observação:** Um aviso solicitando uma **sequência de conexão de conta de armazenamento** é exibido. 
-
-![alt text](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)
+⚠️ **Observação:** Um aviso solicitando uma **sequência de conexão de conta de armazenamento** é exibido. ![alt text](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)
 
 7. Selecione **Choose an existing connection (Escolha uma conexão existente)**. Escolha a conta de armazenamento que você criou anteriormente.
 
-⚠️
-
-   a. Clique em **+ Contêiner** para criar um novo contêiner chamado **knowledge-store** com o nível de privacidade definido como **Privado** e selecione **Criar**.
-
+⚠️ a. Clique em **+ Contêiner** para criar um novo contêiner chamado **knowledge-store** com o nível de privacidade definido como **Privado** e selecione **Criar**.
    b. Selecione o contêiner **de armazenamento de conhecimento** e clique em **Selecionar** na parte inferior da tela.
 
 8. Selecione **Azure blob projections: Document**. Uma configuração para *Container name* com o contêiner *knowledge-store* preenchido automaticamente é exibida. Não altere o nome do contêiner.
