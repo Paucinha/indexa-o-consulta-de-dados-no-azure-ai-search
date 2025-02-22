@@ -281,15 +281,17 @@ Vamos ver o poder do armazenamento de conhecimento em ação. Quando você execu
 
 ![alt text](https://github.com/Paucinha/indexar-consulta-de-dados-no-azure-ai-search/blob/master/coffee-skillset-image-projection.png)
 
+8. Selecione o breadcrumb do blob de armazenamento no canto superior esquerdo da tela para retornar aos *Contêineres* da conta de armazenamento.
 
+9. Selecione **Storage browser** no painel esquerdo e selecione **Tables**. Há uma tabela para cada entidade no índice. Selecione a tabela *coffeeSkillsetKeyPhrases*.
 
-
-
-
+Veja as frases-chave que o repositório de conhecimento conseguiu capturar do conteúdo nas avaliações. Muitos dos campos são chaves, então você pode vincular as tabelas como um banco de dados relacional. O último campo mostra as frases-chave que foram extraídas pelo conjunto de habilidades.
 
 ## Links Importantes
  
 [Explore an Azure AI Search index (UI)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/11-ai-search.html)
+
+[Azure AI Search service page](https://learn.microsoft.com/pt-br/azure/search/)
 
 ##
 
