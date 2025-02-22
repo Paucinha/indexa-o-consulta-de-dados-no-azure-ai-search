@@ -162,12 +162,39 @@ Depois de ter os documentos no armazenamento, você pode usar o Azure AI Search 
 
 ⚠️
 
-a. Clique em **+ Contêiner** para criar um novo contêiner chamado **knowledge-store** com o nível de privacidade definido como **Privado** e selecione **Criar**.
+   a. Clique em **+ Contêiner** para criar um novo contêiner chamado **knowledge-store** com o nível de privacidade definido como **Privado** e selecione **Criar**.
 
-b. Selecione o contêiner **de armazenamento de conhecimento** e clique em **Selecionar** na parte inferior da tela.
+   b. Selecione o contêiner **de armazenamento de conhecimento** e clique em **Selecionar** na parte inferior da tela.
 
-8. 
+8. Selecione **Azure blob projections: Document**. Uma configuração para *Container name* com o contêiner *knowledge-store* preenchido automaticamente é exibida. Não altere o nome do contêiner.
 
+9. Selecione **Próximo: Personalizar índice de destino**. Altere o **nome do índice para coffee-index**.
+
+10. Certifique-se de que a **Chave** esteja definida como **metadata_storage_path**. Deixe **o nome do Suggester** em branco e **o modo Search** preenchido automaticamente.
+
+11. Revise as configurações padrão dos campos de índice. Selecione **filtrável** para todos os campos que já estão selecionados por padrão. Os nomes de campo que precisam ser marcados como *filtráveis* ​​incluem: content, locations, keyphrases, sentiment, merged_content, text, layoutText, imageTags, imageCaption.
+
+![alt text](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-customize-index.png)
+
+12. Selecione **Avançar: Criar um indexador**.
+
+13. Altere o **nome do indexador para coffee-indexer**.
+
+14. Deixe a **programação** definida como **Uma vez**.
+
+15. Expanda as **opções Avançadas**. Certifique-se de que a opção **Base-64 Encode Keys** esteja selecionada, pois as chaves de codificação podem tornar o índice mais eficiente.
+
+16. Selecione **Enviar** para criar a fonte de dados, conjunto de habilidades, índice e indexador. O indexador é executado automaticamente e executa o pipeline de indexação, que:
+
+- Extrai os campos de metadados do documento e o conteúdo da fonte de dados.
+- Executa o conjunto de habilidades cognitivas para gerar campos mais enriquecidos.
+- Mapeia os campos extraídos para o índice.
+
+17. Retorne à sua página de recursos do Azure AI Search. No painel esquerdo, em **Search Management**, selecione **Indexers**. **Selecione o coffee-indexer** recém-criado. Aguarde um minuto e selecione ↻ Refresh até que o **Status** indique sucesso.
+
+18. Selecione o nome do indexador para ver mais detalhes.
+
+![Indexador](https://github.com/Paucinha/indexar-consulta-de-dados-no-azure-ai-search/blob/master/Indexador.png)
 
 
 
