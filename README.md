@@ -142,17 +142,17 @@ Depois de ter os documentos no armazenamento, você pode usar o Azure AI Search 
 - Não selecione *Habilitar enriquecimento incremental*
 - Selecione os seguintes campos enriquecidos:
 
-**Habilidade Cognitiva**                 | **Parâmetro**      | **Nome do Campo**
-------------------------------------------------------------------------------------
-Extrair nomes de localização                                  | localizaçõess          
-------------------------------------------------------------------------------------
-Extrair frases-chave                                          | frases-chave          
-------------------------------------------------------------------------------------
-Detectar sentimento                                           | sentimento
-------------------------------------------------------------------------------------
-Gerar tags a partir de imagens                                | Tags de imagem
-------------------------------------------------------------------------------------
-Gerar legendas a partir de imagens                            | legenda da imagem
+| **Habilidade Cognitiva**                 | **Parâmetro**      | **Nome do Campo**  |
+-------------------------------------------------------------------------------------|
+| Extrair nomes de localização                                  | localizaçõess      |    
+|------------------------------------------------------------------------------------|
+| Extrair frases-chave                                          | frases-chave       |  
+|------------------------------------------------------------------------------------|
+| Detectar sentimento                                           | sentimento         |
+|------------------------------------------------------------------------------------|
+| Gerar tags a partir de imagens                                | Tags de imagem     | 
+|------------------------------------------------------------------------------------|
+|Gerar legendas a partir de imagens                             | legenda da imagem  |
 
 6. Em **Salvar enriquecimentos em um armazenamento de conhecimento**, selecione:
 
