@@ -93,7 +93,7 @@ Você precisará provisionar um recurso **de serviços de IA do Azure** que este
 - **Nível de acesso público**: Container (acesso de leitura anônimo para containers e blobs)
 - **Avançado**: *sem alterações*.
 
-4. Em uma nova aba do navegador, baixe as [avaliações de café compactadas](https://aka.ms/mslearn-coffee-reviews) de https://aka.ms/mslearn-coffee-reviews e extraia os arquivos para a pasta *de avaliações*.
+4. Em uma nova aba do navegador, baixe as [avaliações de café compactadas](https://aka.ms/mslearn-coffee-reviews) de `https://aka.ms/mslearn-coffee-reviews` e extraia os arquivos para a pasta *de avaliações*.
 
 5. No portal do Azure, selecione seu contêiner *coffee-reviews*. No contêiner, selecione **Upload**.
 
@@ -194,11 +194,82 @@ Depois de ter os documentos no armazenamento, você pode usar o Azure AI Search 
 
 18. Selecione o nome do indexador para ver mais detalhes.
 
+![alt text](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-search-indexer-success.png)
+
 ![Indexador](https://github.com/Paucinha/indexar-consulta-de-dados-no-azure-ai-search/blob/master/Indexador.png)
 
+## Consultar o índice
 
+Use o Search explorer para escrever e testar consultas. O Search explorer é uma ferramenta incorporada ao portal do Azure que oferece uma maneira fácil de validar a qualidade do seu índice de pesquisa. Você pode usar o Search explorer para escrever consultas e revisar resultados em JSON.
 
+1. Na página Visão geral do serviço de pesquisa, selecione **Explorador de pesquisa** na parte superior da tela.
 
+![alt text](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/5-exercise-screenshot-7.png)
+
+2. Observe como o índice selecionado é o *coffee-index* que você criou. Abaixo do índice selecionado, altere a visualização para **JSON view**.
+
+![alt text](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/search-explorer-query.png)
+
+No campo **do editor de consulta JSON**, copie e cole:
+
+```json
+{
+    "search": "*",
+    "count": true
+}
+```
+
+1. Selecione **Search**. A consulta de pesquisa retorna todos os documentos no índice de pesquisa, incluindo uma contagem de todos os documentos no campo **@odata.count**. O índice de pesquisa deve retornar um documento JSON contendo os resultados da sua pesquisa.
+
+2. Agora vamos filtrar por localização. No campo **JSON query editor**, copie e cole:
+
+```json
+{
+ "search": "locations:'Chicago'",
+ "count": true
+}
+```
+
+3. Selecione **Search**. A consulta pesquisa todos os documentos no índice e filtra por avaliações com um local em Chicago. Você deve ver `3` no `@odata.count` campo.
+
+4. Agora vamos filtrar por sentimento. No campo **JSON query editor**, copie e cole:
+
+```json
+{
+ "search": "sentiment:'negative'",
+ "count": true
+}
+```
+
+5. Selecione **Search**. A consulta pesquisa todos os documentos no índice e filtra por avaliações com um sentimento negativo. Você deve ver `1` no `@odata.count` campo.
+
+⚠️ **Nota** Veja como os resultados são classificados por `@search.score`. Esta é a pontuação atribuída pelo mecanismo de busca para mostrar o quão próximos os resultados correspondem à consulta fornecida.
+
+6. Um dos problemas que podemos querer resolver é por que pode haver certas avaliações. Vamos dar uma olhada nas frases-chave associadas à avaliação negativa. O que você acha que pode ser a causa da avaliação?
+
+## Revise o repositório de conhecimento
+
+Vamos ver o poder do armazenamento de conhecimento em ação. Quando você executou o assistente Import data , você também criou um armazenamento de conhecimento. Dentro do armazenamento de conhecimento, você encontrará os dados enriquecidos extraídos por habilidades de IA persistem na forma de projeções e tabelas.
+
+1. No portal do Azure, volte para sua conta de armazenamento do Azure.
+
+2. No painel de menu à esquerda, selecione **Containers**. Selecione o contêiner **knowledge-store**.
+
+![alt text](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-0.png)
+
+3. Você verá uma lista de pastas. Há uma pasta para todos os metadados de cada documento de revisão. **Selecione qualquer uma das pastas**. Dentro da pasta, clique no arquivo *objectprojection.json**.
+
+![alt text](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-1.png)
+
+4. Selecione **Editar** para ver o JSON produzido para um dos documentos do seu armazenamento de dados do Azure.
+
+![alt text](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-2.png)
+
+5. Selecione o breadcrumb do blob de armazenamento no canto superior esquerdo da tela para retornar aos Contêineres da conta de armazenamento .
+
+![alt text](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-4.png)
+
+![alt text](https://github.com/Paucinha/indexar-consulta-de-dados-no-azure-ai-search/blob/master/breadcrumb-%20blob.png)
 
 
 
