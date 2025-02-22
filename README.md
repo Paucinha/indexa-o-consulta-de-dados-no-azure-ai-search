@@ -28,9 +28,8 @@ A solução que você criará para o Fourth Coffee requer os seguintes recursos 
 - Um recurso do Azure AI Search , que gerenciará a indexação e a consulta.
 - Um recurso de serviços de IA do Azure , que fornece serviços de IA para habilidades que sua solução de pesquisa pode usar para enriquecer os dados na fonte de dados com insights gerados por IA.
 
-```markdown
 !  **Observação:** os recursos do Azure AI Search e dos serviços do Azure AI devem estar no mesmo local!
-```
+
 - Uma conta de armazenamento com contêineres de blobs, que armazenarão documentos brutos e outras coleções de tabelas, objetos ou arquivos.
 
 **Criar um recurso *de pesquisa do Azure AI***
@@ -136,15 +135,13 @@ Depois de ter os documentos no armazenamento, você pode usar o Azure AI Search 
 - Altere o **nome do Skillset** para **coffee-skillset**.
 - Marque a caixa de seleção **Habilitar OCR e mesclar todo o texto no campo merged_content**.
 
-```markdown
 !  **Observação:** é importante selecionar **Habilitar OCR** para ver todas as opções de campo enriquecido.
-```
 
 - Certifique-se de que o **campo Dados de origem** esteja definido como **merged_content*.
 - Altere o **nível de granularidade de enriquecimento** para **Páginas (blocos de 5000 caracteres)**.
 - Não selecione *Habilitar enriquecimento incremental*
 - Selecione os seguintes campos enriquecidos:
-```markdown
+
 | **Habilidade Cognitiva**                  | **Parâmetro**     | **Nome do Campo**     |
 |-------------------------------------------|-------------------|-----------------------|
 | Extrair nomes de localização              | localizações      | localizações          |
@@ -156,7 +153,7 @@ Depois de ter os documentos no armazenamento, você pode usar o Azure AI Search 
 | Gerar tags a partir de imagens            | Tags de imagem    | Tags de imagem        |
 |-------------------------------------------|-------------------|-----------------------|
 | Gerar legendas a partir de imagens        | legenda da imagem | legenda da imagem     |
-```
+
 
 
 
