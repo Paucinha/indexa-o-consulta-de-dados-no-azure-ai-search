@@ -170,9 +170,10 @@ Gerar legendas a partir de imagens                           legenda da imagem
 
 7. Selecione **Choose an existing connection (Escolha uma conexão existente)**. Escolha a conta de armazenamento que você criou anteriormente.
 
-⚠️ a. Clique em **+ Contêiner** para criar um novo contêiner chamado **knowledge-store** com o nível de privacidade definido como **Privado** e selecione **Criar**.
+⚠️
+a. Clique em **+ Contêiner** para criar um novo contêiner chamado **knowledge-store** com o nível de privacidade definido como **Privado** e selecione **Criar**.
 
-   b. Selecione o contêiner **de armazenamento de conhecimento** e clique em **Selecionar** na parte inferior da tela.
+b. Selecione o contêiner **de armazenamento de conhecimento** e clique em **Selecionar** na parte inferior da tela.
 
 8. 
 
