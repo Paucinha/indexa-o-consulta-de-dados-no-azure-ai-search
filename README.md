@@ -271,6 +271,13 @@ Vamos ver o poder do armazenamento de conhecimento em ação. Quando você execu
 
 ![alt text](https://github.com/Paucinha/indexar-consulta-de-dados-no-azure-ai-search/blob/master/breadcrumb-%20blob.png)
 
+6. Em *Containers*, selecione o container *coffee-skillset-image-projection*. Selecione qualquer um dos itens.
+
+![alt text](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-5.png)
+
+7. Selecione qualquer um dos arquivos *.jpg*. Selecione **Editar** para ver a imagem armazenada do documento. Observe como todas as imagens dos documentos são armazenadas dessa maneira.
+
+
 
 
 
