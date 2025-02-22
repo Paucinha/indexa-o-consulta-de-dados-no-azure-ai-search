@@ -27,8 +27,9 @@ A solução que você criará para o Fourth Coffee requer os seguintes recursos 
 
 - Um recurso do Azure AI Search , que gerenciará a indexação e a consulta.
 - Um recurso de serviços de IA do Azure , que fornece serviços de IA para habilidades que sua solução de pesquisa pode usar para enriquecer os dados na fonte de dados com insights gerados por IA.
-```
-Observação: os recursos do Azure AI Search e dos serviços do Azure AI devem estar no mesmo local!
+
+```markdown
+!  **Observação:** os recursos do Azure AI Search e dos serviços do Azure AI devem estar no mesmo local!
 ```
 - Uma conta de armazenamento com contêineres de blobs, que armazenarão documentos brutos e outras coleções de tabelas, objetos ou arquivos.
 
@@ -97,12 +98,65 @@ Você precisará provisionar um recurso **de serviços de IA do Azure** que este
 
 5. No portal do Azure, selecione seu contêiner *coffee-reviews*. No contêiner, selecione **Upload**.
 
+![alt text](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/storage-blob-3.png)
+
 6. No painel **Carregar blob**, selecione **Selecionar um arquivo**.
 
 7. Na janela do Explorer, selecione **todos** os arquivos na pasta de *avaliações*, selecione **Abrir** e, em seguida, selecione **Carregar**.
 
+![alt text](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-container-upload-files.png)
 
+8. Após o upload ser concluído, você pode fechar o painel **Upload blob**. Seus documentos agora estão no seu contêiner de armazenamento *coffee-reviews*.
 
+## Indexar os documentos
+
+Depois de ter os documentos no armazenamento, você pode usar o Azure AI Search para extrair insights dos documentos. O portal do Azure fornece um *assistente Importar dados*. Com esse assistente, você pode criar automaticamente um índice e um indexador para fontes de dados com suporte. Você usará o assistente para criar um índice e importar seus documentos de pesquisa do armazenamento para o índice do Azure AI Search.
+
+1. No portal do Azure, navegue até seu recurso do Azure AI Search. Na página **Visão geral**, selecione **Importar dados**.
+
+![alt text](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/azure-search-wizard-1.png)
+
+2. Na página **Connect to your data**, na lista **Data Source**, selecione **Azure Blob Storage**. Preencha os detalhes do armazenamento de dados com os seguintes valores:
+
+- **Fonte de dados**: Armazenamento de Blobs do Azure
+- **Nome da fonte de dados** : coffee-customer-data
+- **Dados a extrair**: Conteúdo e metadados
+- **Modo de análise**: Padrão
+- **String de conexão**: *Selecione **Choose an existing connection**. Selecione sua conta de armazenamento, selecione o contêiner **coffee-reviews** e clique em **Select**.
+- **Autenticação de identidade gerenciada**: Nenhuma
+- **Nome do contêiner**: *esta configuração é preenchida automaticamente depois que você escolhe uma conexão existente*.
+- **Pasta Blob**: *deixe em branco*.
+- **Descrição**: Avaliações das cafeterias Fourth Coffee.
+
+3. Selecione **Avançar: Adicionar habilidades cognitivas (opcional)**.
+
+4. Na seção **Anexar serviços de IA**, selecione seu recurso de serviços de IA do Azure.
+5. Na seção **Adicionar enriquecimentos**:
+
+- Altere o **nome do Skillset** para **coffee-skillset**.
+- Marque a caixa de seleção **Habilitar OCR e mesclar todo o texto no campo merged_content**.
+
+```markdown
+!  **Observação:** é importante selecionar **Habilitar OCR** para ver todas as opções de campo enriquecido.
+```
+
+- Certifique-se de que o **campo Dados de origem** esteja definido como **merged_content*.
+- Altere o **nível de granularidade de enriquecimento** para **Páginas (blocos de 5000 caracteres)**.
+- Não selecione *Habilitar enriquecimento incremental*
+- Selecione os seguintes campos enriquecidos:
+```markdown
+| **Habilidade Cognitiva**                  | **Parâmetro**     | **Nome do Campo**     |
+|-------------------------------------------|-------------------|-----------------------|
+| Extrair nomes de localização              | localizações      | localizações          |
+|-------------------------------------------|-------------------|-----------------------|
+| Extrair frases-chave                      | frases-chave      | frases-chave          |
+|-------------------------------------------|-------------------|-----------------------|
+| Detectar sentimento                       | sentimento        | sentimento            |
+|-------------------------------------------|-------------------|-----------------------|
+| Gerar tags a partir de imagens            | Tags de imagem    | Tags de imagem        |
+|-------------------------------------------|-------------------|-----------------------|
+| Gerar legendas a partir de imagens        | legenda da imagem | legenda da imagem     |
+```
 
 
 

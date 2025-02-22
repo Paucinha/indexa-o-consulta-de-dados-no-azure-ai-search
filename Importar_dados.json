@@ -1,0 +1,26 @@
+{
+    "id": "/subscriptions/f5f6088e-679a-4fc3-9a5d-600dcca616e6/resourceGroups/AZ-900_Lab_DIO/providers/Microsoft.Search/searchServices/service-dio-lab",
+    "name": "service-dio-lab",
+    "type": "Microsoft.Search/searchServices",
+    "location": "East US",
+    "tags": {},
+    "properties": {
+        "replicaCount": 1,
+        "partitionCount": 1,
+        "status": "running",
+        "statusDetails": "",
+        "provisioningState": "succeeded",
+        "hostingMode": "Default",
+        "publicNetworkAccess": "Enabled",
+        "networkRuleSet": {
+            "ipRules": [],
+            "bypass": "None"
+        },
+        "privateEndpointConnections": [],
+        "sharedPrivateLinkResources": []
+    },
+    "sku": {
+        "name": "basic"
+    },
+    "apiVersion": "2020-08-01"
+}
