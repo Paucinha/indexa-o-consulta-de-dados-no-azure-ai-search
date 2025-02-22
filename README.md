@@ -277,6 +277,9 @@ Vamos ver o poder do armazenamento de conhecimento em ação. Quando você execu
 
 7. Selecione qualquer um dos arquivos *.jpg*. Selecione **Editar** para ver a imagem armazenada do documento. Observe como todas as imagens dos documentos são armazenadas dessa maneira.
 
+![https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-3.png](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-3.png)
+
+![alt text](https://github.com/Paucinha/indexar-consulta-de-dados-no-azure-ai-search/blob/master/coffee-skillset-image-projection.png)
 
 
 
