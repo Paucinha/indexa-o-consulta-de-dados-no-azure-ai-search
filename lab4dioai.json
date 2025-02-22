@@ -1,0 +1,64 @@
+{
+    "sku": {
+        "name": "Standard_LRS",
+        "tier": "Standard"
+    },
+    "kind": "StorageV2",
+    "id": "/subscriptions/f5f6088e-679a-4fc3-9a5d-600dcca616e6/resourceGroups/AZ-900_Lab_DIO/providers/Microsoft.Storage/storageAccounts/lab4dioai",
+    "name": "lab4dioai",
+    "type": "Microsoft.Storage/storageAccounts",
+    "location": "eastus",
+    "tags": {},
+    "properties": {
+        "dnsEndpointType": "Standard",
+        "defaultToOAuthAuthentication": false,
+        "publicNetworkAccess": "Enabled",
+        "keyCreationTime": {
+            "key1": "2025-02-21T20:57:37.8979380Z",
+            "key2": "2025-02-21T20:57:37.8979380Z"
+        },
+        "allowCrossTenantReplication": false,
+        "privateEndpointConnections": [],
+        "minimumTlsVersion": "TLS1_2",
+        "allowBlobPublicAccess": true,
+        "allowSharedKeyAccess": true,
+        "largeFileSharesState": "Enabled",
+        "networkAcls": {
+            "bypass": "AzureServices",
+            "virtualNetworkRules": [],
+            "ipRules": [],
+            "defaultAction": "Allow"
+        },
+        "supportsHttpsTrafficOnly": true,
+        "encryption": {
+            "requireInfrastructureEncryption": false,
+            "services": {
+                "file": {
+                    "keyType": "Account",
+                    "enabled": true,
+                    "lastEnabledTime": "2025-02-21T20:57:38.0385570Z"
+                },
+                "blob": {
+                    "keyType": "Account",
+                    "enabled": true,
+                    "lastEnabledTime": "2025-02-21T20:57:38.0385570Z"
+                }
+            },
+            "keySource": "Microsoft.Storage"
+        },
+        "accessTier": "Hot",
+        "provisioningState": "Succeeded",
+        "creationTime": "2025-02-21T20:57:37.7104390Z",
+        "primaryEndpoints": {
+            "dfs": "https://lab4dioai.dfs.core.windows.net/",
+            "web": "https://lab4dioai.z13.web.core.windows.net/",
+            "blob": "https://lab4dioai.blob.core.windows.net/",
+            "queue": "https://lab4dioai.queue.core.windows.net/",
+            "table": "https://lab4dioai.table.core.windows.net/",
+            "file": "https://lab4dioai.file.core.windows.net/"
+        },
+        "primaryLocation": "eastus",
+        "statusOfPrimary": "available"
+    },
+    "apiVersion": "2022-05-01"
+}
