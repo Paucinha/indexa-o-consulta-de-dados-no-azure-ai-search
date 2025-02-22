@@ -117,9 +117,6 @@ Você precisará provisionar um recurso **de serviços de IA do Azure** que este
 
 
 
-
-
-
 ## Links Importantes
  
 [Explore an Azure AI Search index (UI)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/11-ai-search.html)
